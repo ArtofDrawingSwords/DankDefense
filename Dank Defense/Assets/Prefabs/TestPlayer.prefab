@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11460352}
   - 114: {fileID: 11442710}
   - 114: {fileID: 11464332}
+  - 114: {fileID: 11424106}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -64,19 +65,34 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .569999993, y: .810000002}
+--- !u!114 &11424106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61cd6c65ae174a4294259e27f3989d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTransform: {fileID: 468336}
+  lerpRate: 15
+  useHistoricalLerping: 1
 --- !u!114 &11429608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103994}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdc2f798ad3b64f4a88986c791152dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   rigidBodySpeed: 100
+  moveX: 0
+  moveY: 0
 --- !u!114 &11437550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de35ec32ddebc7d438728314905cdc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Player
 --- !u!114 &11460352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: .100000001
+  m_SendInterval: .0769230798
   m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -262,7 +279,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerName
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_InterpolateMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SendInterval
+      value: .0769230798
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Interpolate
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: useHistoricalLerping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
